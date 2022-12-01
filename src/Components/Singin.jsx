@@ -27,11 +27,12 @@ export const Singin = () => {
 
   return (
     <div className="container">
-      <form action="/my-handling-form-page" onSubmit={postuser}>
+      <form className="form blankito" action="/my-handling-form-page" onSubmit={postuser}>
         <ul>
           <li>
-            <label htmlFor="name">Nombre:</label>
-           <div> <input
+            <label htmlFor="name" className="form-label">Nombre:</label>
+           <div className="">
+             <input className="form-control"
               type="text"
               id="name"
               name="username"
@@ -41,9 +42,9 @@ export const Singin = () => {
             </div>
           </li>
           <li>
-            <label htmlFor="mail">Correo electrónico:</label>
-           <div> 
-            <input
+            <label htmlFor="mail" className="form-label">Correo electrónico:</label>
+           <div > 
+            <input className="form-control"
               type="email"
               id="mail"
               name="email"
@@ -52,11 +53,11 @@ export const Singin = () => {
             </div>
           </li>
           <li>
-            <label htmlFor="password">Contraseña</label>
+            <label htmlFor="password" className="form-label">Contraseña</label>
             <div>
-              <input
+              <input 
               type="password"
-              className="password"
+              className="password form-control"
               name="password"
               onChange={handlechange}
             >
