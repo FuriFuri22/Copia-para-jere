@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import isUndefined from "../auxs/ourLibrary";
 
 export const InitDonar = () =>{
 
@@ -41,7 +41,7 @@ export const InitDonar = () =>{
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        opcion.typeDonacion = `${opcion.typef} ${opcion.para} ${opcion.de}`;
+        opcion.typeDonacion = `${isUndefined(opcion.typef)} ${isUndefined(opcion.para)} ${isUndefined(opcion.de)}`;
 
         (async () => {
             options.body = JSON.stringify({ typeDonacion, description })
