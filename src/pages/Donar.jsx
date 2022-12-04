@@ -15,16 +15,15 @@ export const Donar = () =>{
         <NavbarLogged/>
         <div >
         <Row>
-          <Col><section className="">
+          <Col><section className="container">
               <InitDonar/>
-              <HistorDonar/>
+              
             </section>
           </Col>
-          <Col> <section className="">
-             <Scroll>
-             <SecPeticion/>
-             </Scroll>
-            </section>
+          <Col>
+              <section className="container">
+                <HistorDonar/>
+              </section>
           </Col>
         </Row>
           

@@ -1,5 +1,6 @@
 
 
+
 import React from "react";
 import { useState } from "react";
 import { diccionario} from "../auxs/library";
@@ -14,6 +15,7 @@ export const Login = () => {
   }
  const postuser=async()=>{
     e.preventDefault();
+
 
   const userlogged = await diccionario.iniciarSesion(formData.email, formData.password)
 

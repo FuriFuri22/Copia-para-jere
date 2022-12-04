@@ -1,15 +1,15 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 export const Navbar= (props)=>{
     const{Saludo}=props
     return (
        <header>
-       <nav className="navbar navbar-expand-lg bg-light p-2 degradeVerde" id="menu_barra">
+       <nav className="navbar navbar-expand-lg  p-2 blankito" id="menu_barra">
         <div className="container-fluid">
 
-        <NavLink className="navbar-brand" to="/Inicio" id="ReciRop"><strong>Reci<span className="text-light">Rop</span></strong></NavLink>
+        <NavLink className="navbar-brand" to="/Inicio" id="ReciRop"><strong>Reci<span className="text-danger">Rop</span></strong></NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

@@ -25,3 +25,14 @@ background: radial-gradient(circle, rgba(224,132,90,1) 0%, rgba(208,228,5,1) 53%
   background: rgb(208,228,5);
 background: radial-gradient(circle, rgba(208,228,5,1) 18%, rgba(224,132,90,1) 57%, rgba(80,20,136,1) 97%);
 }
+.ocultar{
+  display: none;
+}
+.mostrar{
+  display: block;
+}
+textarea {
+  height: 30px;
+  width: 100%;
+  resize: none;
+}

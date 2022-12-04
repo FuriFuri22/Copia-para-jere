@@ -7,23 +7,28 @@ export const HistorDonar = () =>{
 
 return (
   
-     
-    <div className="accordion" id="accordionExample">
-        <div className="accordion-item">
-            <h2 className="accordion-header" id="headingOne">
-                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Accordion Item #1
-                </button>
-            </h2>
-            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> 
-                </div>
+     <div>
+        
+        <div  id="container form " className="container"><br />
+            <div className="text-center">
+                <label htmlFor="#container" className="form-control blankito"><p className="h4"> Historial de donaciones</p></label>
             </div>
-        </div>
-  </div>
-    
-   
+            <div className="card text-bg-dark mb-3">
+                <div className="row g-0">
+                 <div className="col-md-4">
+                    <img src="/public/donaciones.jpeg" className="img-fluid rounded-start" alt="..."></img>
+                 </div>
+                 <div className="col-md-8">
+                  <div className="card-body">
+                  <h5 className="card-title">Card title</h5>
+                  <p className="card-text">This is a wider card with.</p>
+                  <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+     </div> 
    
 )
 }
