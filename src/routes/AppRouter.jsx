@@ -8,6 +8,7 @@ import { Donar } from "../pages/Donar"
 import { PrivateRoutes } from "./PrivateRoues"
 
 
+
 export const AppRouter = () => {
   return (
     <BrowserRouter>
@@ -36,7 +37,7 @@ export const AppRouter = () => {
        }/>
        <Route path="/*" element={
            <PublicRoutes>  
-             <Iniciosesion />
+             <Inicio/>
             </PublicRoutes>
         } />
 

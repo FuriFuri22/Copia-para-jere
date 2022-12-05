@@ -1,5 +1,5 @@
 import React from "react"
-import { HistorDonar } from "../Components/HistorDonar"
+
 import { InitDonar } from "../Components/InitDonar"
 import { SecPeticion } from "../Components/SecPeticion"
 
@@ -7,6 +7,7 @@ import { Row, Col} from 'react-bootstrap'
 
 import { NavbarLogged } from "../Components/NavbarLogged"
 import { Scroll } from "../Components/scroll"
+import { HistorDonar } from "../Components/HistorDonar"
 export const Donar = () =>{
 
 
@@ -21,9 +22,7 @@ export const Donar = () =>{
             </section>
           </Col>
           <Col>
-              <section className="container">
-                <HistorDonar/>
-              </section>
+              <HistorDonar/>
           </Col>
         </Row>
           

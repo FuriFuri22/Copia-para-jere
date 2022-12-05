@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
-import isUndefined from "../auxs/ourLibrary";
 
 export const InitDonar = () =>{
 
@@ -9,7 +8,7 @@ export const InitDonar = () =>{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MzhiN2JiZmI4ODhlZTc0YWRhODljZmQiLCJpYXQiOjE2NzAxMDQ0MzIsImV4cCI6MTY3MDEyMjQzMn0.XsTsRmfXfvRVQN9lJ_Bth-22OBoEU92l1M-gZnm840A"
+            "Authorization": ''
         }
     }
 
@@ -41,7 +40,7 @@ export const InitDonar = () =>{
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        opcion.typeDonacion = `${isUndefined(opcion.typef)} ${isUndefined(opcion.para)} ${isUndefined(opcion.de)}`;
+        opcion.typeDonacion = `${opcion.typef} ${opcion.para} ${opcion.de}`;
 
         (async () => {
             options.body = JSON.stringify({ typeDonacion, description })
