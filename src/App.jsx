@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import { useReducer, useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {AuthContext} from './context/AuthContext'
@@ -13,10 +13,15 @@ const usuario={
 }
   const [user, dispatch] = useReducer(authreducer1,usuario)
 
+  const [logged, setLogged] = useState('')
+  const [isLogged, setIslogged] = useState(false)
+  useEffect(() => {
+   (logged)?setIslogged(true) : isLogged
+  }, [logged])
   return (
     <AuthContext.Provider
     value={{
-     user, dispatch
+     user, dispatch, logged, setLogged
     }}>
     <AppRouter/>
     </AuthContext.Provider>

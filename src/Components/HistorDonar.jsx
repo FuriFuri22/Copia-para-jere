@@ -1,16 +1,26 @@
 import React from "react";
 import { useEffect, useContext, useState } from "react";
-import {getDonacion} from "../selectors/donacionSelector"
+
 
 export const HistorDonar = () =>{
  
  const [donacion, setDonacion] = useState([])
   useEffect(() => {
     (async () => {
-      const data = await getDonacion();
-      console.log(data);
-      setDonacion(data)
-    })();
+      try {
+        const resp = await fetch('http://localhost:4000/Donacion', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('token')
+            }
+        });
+        const donation= await resp.json();
+        console.log(donation)
+        setDonacion(donation)
+    } catch (error) {
+        console.log(error);
+        throw new Error('Error al cargar el historial');
+    }})();
   },[])
   
   console.log(donacion)

@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 export const InitDonar = () =>{
 
+    const {logged} = useContext(AuthContext)
+    console.log(logged)
     const options = {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": ''
+            "Authorization": logged
         }
     }
 
@@ -36,11 +39,12 @@ export const InitDonar = () =>{
        (opcion.typef == "Ropa")?rop.classList.replace("ocultar", "mostrar") : rop.classList.replace("mostrar", "ocultar");
        (opcion.typef == "Material Reciclable")?matre.classList.replace("ocultar", "mostrar"):matre.classList.replace("mostrar", "ocultar");
        (opcion.typef == "Otro")?siO.classList.replace("ocultar", "mostrar"):siO.classList.replace("mostrar", "ocultar");
+       opcion.typeDonacion = `${opcion.typef} ${opcion.para} ${opcion.de}`;
     }, [opcion])
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        opcion.typeDonacion = `${opcion.typef} ${opcion.para} ${opcion.de}`;
+       
 
         (async () => {
             options.body = JSON.stringify({ typeDonacion, description })

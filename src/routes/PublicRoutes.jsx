@@ -5,7 +5,7 @@ import {AuthContext} from '../context/AuthContext'
 export const PublicRoutes = ({children}) => {
   const {user} = useContext(AuthContext)
   return user.logged
-          ?< Navigate to='../pages/Donation.jsx'/>
+          ?< Navigate to='/Donar'/>
           :children
 }
 //<Navigate to='/src/pages/Inicio.jsx' />

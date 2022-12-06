@@ -6,6 +6,7 @@ import { PublicRoutes } from "./PublicRoutes";
 import {Iniciosesion, Registro,Inicio} from '../pages/';
 import { Donar } from "../pages/Donar"
 import { PrivateRoutes } from "./PrivateRoues"
+import { DashboardRouter } from "./DashboardRoutes";
 
 
 
@@ -21,10 +22,6 @@ export const AppRouter = () => {
             </PublicRoutes>
         } />
 
-        <Route path="/Donar" element={
-          <Donar />
-        }/>
-
         <Route path='/*' element={
             <Inicio/>
           // Proteger las rutas privadas
@@ -32,7 +29,7 @@ export const AppRouter = () => {
 
         <Route path='/*' element={
           <PrivateRoutes>
-            {/*<Donar/>*/}
+            <DashboardRouter/>
           </PrivateRoutes>
        }/>
        <Route path="/*" element={
